@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         let _ = combineLatest(slider1.rx_value, slider2.rx_value) {
-                $0 + $1
+                $0 * 2 + $1
             }.map {
                 "Sum of slider values is \($0)"
             }.bindTo(label.rx_text)
