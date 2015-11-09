@@ -12,7 +12,7 @@ Nevertheless, Cocoa Touch is an object-oriented framework and bares the constrai
 
 Functional programming solves these problems by priviliging immutable state and defining application logic as expressions that do not change during the application's lifecycle. By defining self-contained functions, computations can be easily parallelized and concurrency issues minimized.
 
-## The Reactive Mindset
+## The Reactive Model
 
 The reactive programming model has its roots in [FRP (functional reactive programming)](https://en.wikipedia.org/wiki/Functional_reactive_programming) which shifts the paradigm from discrete, imperative, command-driven programming to a series of transformations that can be applied to a stream of inputs continously over time.
 
@@ -40,7 +40,7 @@ At any given moment, to evaluate that expression you must reassign the value of 
 
 How would we do this in a reactive programming approach? 
 
-In the reactive mindset, we would create two streams that propagate changes in the values of either A or B over time. Each value change is represented as a signal in its corresponding stream. We then combine both streams and assign a transformation that we want to perform on each signal emitted, thus creating a new stream that will emit only transformed values.
+In the reactive model, we would create two streams that propagate changes in the values of either A or B over time. Each value change is represented as a signal in its corresponding stream. We then combine both streams and assign a transformation that we want to perform on each signal emitted, thus creating a new stream that will emit only transformed values.
 
 The usual way to demonstrate this is using [marbles diagrams](http://rxmarbles.com/), where each line represents the continuity of time and each marble an event that occurs at a determined point in time:
 
@@ -71,7 +71,7 @@ But none of these approaches defines a persistent and explicit relationship betw
 
 We can overcome this with a reactive programming model. There are a couple of different implementations currently available for OS X and iOS development such as [RxSwift](https://github.com/ReactiveX/RxSwift) and [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa).
 
-We will focus on *RxSwift* but the basic concepts we will address are similar in both frameworks.
+We will focus on *RxSwift* but the basic concepts we address are similar in both frameworks.
 
 ### RxSwift
 
@@ -89,11 +89,12 @@ We take advantage of the `rx_value` extension of the `UISlider` class that trans
 
 By composing three independent operations (`combineLatest()`, `map()` and `bindTo()`) we were able to concisely express a relationship between three objects and continuously update our application's UI, reacting accordingly to changes in the application state.
 
+![](https://raw.githubusercontent.com/mgcm/ReactiveProgrammingSwift/master/SlidersAnimation.gif)
+
 # What's next?
 
 We are only scratching the surface on what you can do with *RxSwift*.
 
-In the [sample source code](https://github.com/mgcm/ReactiveProgrammingSwift), you will 
-find an example on how to download online resources using chainable asynchronous tasks. Be sure to check it out if this article sparked your curiosity. 
+In the [sample source code](https://github.com/mgcm/ReactiveProgrammingSwift), you will find an example on how to download online resources using chainable asynchronous tasks. Be sure to check it out if this article sparked your curiosity. 
 
-Then take some time to read [the documentation](https://github.com/ReactiveX/RxSwift/blob/master/Documentation/API.md) and learn about the several other Cocoa API extensions that will help you develop iOS apps in a more functional and expressive way.
+Then take some time to read [the documentation](https://github.com/ReactiveX/RxSwift/blob/master/Documentation/API.md) and learn about the several other  API extensions that will help you develop iOS apps in a more functional and expressive way.
