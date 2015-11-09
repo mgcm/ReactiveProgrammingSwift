@@ -12,8 +12,8 @@ import RxCocoa
 import CoreImage
 
 class ViewController: UIViewController {
-    static let swiftLogo = "https://developer.apple.com/assets/elements/icons/256x256/swift_2x.png"
     static let rxSwiftLogo = "https://raw.githubusercontent.com/ReactiveX/RxSwift/rxswift-2.0/assets/Rx_Logo_M.png"
+    static let swiftLogo = "https://developer.apple.com/assets/elements/icons/256x256/swift_2x.png"
 
     @IBOutlet weak var slider1: UISlider!
     @IBOutlet weak var slider2: UISlider!
