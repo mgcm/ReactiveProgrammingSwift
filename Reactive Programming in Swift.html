@@ -316,7 +316,7 @@ sup {
 
 <p>Nevertheless, Cocoa Touch is an object-oriented framework and bares the constraints that this paradigm enforces. Typical issues that arise in software development projects include managing shared application state and concurrent asynchronous tasks that compete for the data that resides there.</p>
 
-<p>Functional programming solves these problems by priviliging immutable state and defining application logic as expressions that do not change during the application&#39;s lifecycle. By defining self-contained functions, computations can be easily parallelized and concurrency issues minimized.</p>
+<p>Functional programming solves these problems by privileging immutable state and defining application logic as expressions that do not change during the application&#39;s lifecycle. By defining self-contained functions, computations can be easily parallelized and concurrency issues minimized.</p>
 
 <h2 id="toc_3">The Reactive Model</h2>
 
@@ -380,7 +380,7 @@ func update() {
 
 <h3 id="toc_6">RxSwift</h3>
 
-<p><em>RxSwift</em> extends the <em><a href="https://en.wikipedia.org/wiki/Observer_pattern">Observer</a></em> pattern to simulate asynchronous streams of data flowing out of your typical Cocoa Touch objects. By extending some of Cocoa&#39;s classes with  <em>observable streams</em>, you are able to subscribe to their output and use them in <a href="https://github.com/ReactiveX/RxSwift/blob/master/Documentation/API.md">composable operations</a>, such as <code>filter()</code>, <code>merge()</code>, <code>map()</code>, <code>reduce()</code> and others. </p>
+<p><em>RxSwift</em> extends the <em><a href="https://en.wikipedia.org/wiki/Observer_pattern">Observer</a></em> pattern to simulate asynchronous streams of data flowing out of your Cocoa Touch objects as if they were typical collections. By extending some of Cocoa Touch&#39;s classes with <em>observable streams</em>, you are able to subscribe to their output and use them with <a href="https://github.com/ReactiveX/RxSwift/blob/master/Documentation/API.md">composable operations</a>, such as <code>filter()</code>, <code>merge()</code>, <code>map()</code>, <code>reduce()</code> and others. </p>
 
 <p>Returning to our previous example, let&#39;s say we have an iOS application with two sliders (<code>sliderA</code> and <code>sliderB</code>) and we wish to continously update a label (<code>labelC</code>) with the same expression we used before (<code>A * 2 + B</code>):</p>
 
@@ -402,7 +402,7 @@ func update() {
 
 <p>In the <a href="https://github.com/mgcm/ReactiveProgrammingSwift">sample source code</a>, you will find an example on how to download online resources using chainable asynchronous tasks. Be sure to check it out if this article sparked your curiosity. </p>
 
-<p>Then take some time to read <a href="https://github.com/ReactiveX/RxSwift/blob/master/Documentation/API.md">the documentation</a> and learn about the several other  API extensions that will help you develop iOS apps in a more functional and expressive way.</p>
+<p>Then take some time to read <a href="https://github.com/ReactiveX/RxSwift/tree/master/Documentation">the documentation</a> and learn about the several other  API extensions that will help you develop iOS apps in a more functional and expressive way.</p>
 
 
 </body>

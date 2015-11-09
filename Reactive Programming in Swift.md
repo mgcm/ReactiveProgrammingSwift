@@ -10,7 +10,7 @@ Swift can be described as a modern object-oriented language with native support 
 
 Nevertheless, Cocoa Touch is an object-oriented framework and bares the constraints that this paradigm enforces. Typical issues that arise in software development projects include managing shared application state and concurrent asynchronous tasks that compete for the data that resides there.
 
-Functional programming solves these problems by priviliging immutable state and defining application logic as expressions that do not change during the application's lifecycle. By defining self-contained functions, computations can be easily parallelized and concurrency issues minimized.
+Functional programming solves these problems by privileging immutable state and defining application logic as expressions that do not change during the application's lifecycle. By defining self-contained functions, computations can be easily parallelized and concurrency issues minimized.
 
 ## The Reactive Model
 
@@ -75,7 +75,7 @@ We will focus on *RxSwift* but the basic concepts we address are similar in both
 
 ### RxSwift
 
-*RxSwift* extends the *[Observer](https://en.wikipedia.org/wiki/Observer_pattern)* pattern to simulate asynchronous streams of data flowing out of your typical Cocoa Touch objects. By extending some of Cocoa's classes with  *observable streams*, you are able to subscribe to their output and use them in [composable operations](https://github.com/ReactiveX/RxSwift/blob/master/Documentation/API.md), such as `filter()`, `merge()`, `map()`, `reduce()` and others. 
+*RxSwift* extends the *[Observer](https://en.wikipedia.org/wiki/Observer_pattern)* pattern to simulate asynchronous streams of data flowing out of your Cocoa Touch objects as if they were typical collections. By extending some of Cocoa Touch's classes with *observable streams*, you are able to subscribe to their output and use them with [composable operations](https://github.com/ReactiveX/RxSwift/blob/master/Documentation/API.md), such as `filter()`, `merge()`, `map()`, `reduce()` and others. 
 
 Returning to our previous example, let's say we have an iOS application with two sliders (`sliderA` and `sliderB`) and we wish to continously update a label (`labelC`) with the same expression we used before (`A * 2 + B`):
 
@@ -97,4 +97,4 @@ We are only scratching the surface on what you can do with *RxSwift*.
 
 In the [sample source code](https://github.com/mgcm/ReactiveProgrammingSwift), you will find an example on how to download online resources using chainable asynchronous tasks. Be sure to check it out if this article sparked your curiosity. 
 
-Then take some time to read [the documentation](https://github.com/ReactiveX/RxSwift/blob/master/Documentation/API.md) and learn about the several other  API extensions that will help you develop iOS apps in a more functional and expressive way.
+Then take some time to read [the documentation](https://github.com/ReactiveX/RxSwift/tree/master/Documentation) and learn about the several other  API extensions that will help you develop iOS apps in a more functional and expressive way.
